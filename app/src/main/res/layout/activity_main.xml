@@ -36,7 +36,7 @@
 
             <TextView
                 android:text="Hot Dog"
-                android:layout_width="wrap_content"
+                android:layout_width="100dp"
                 android:layout_height="wrap_content"
                 android:id="@+id/hd_text"
                 android:textAlignment="center" />
@@ -48,11 +48,92 @@
                 android:id="@+id/hd_minus_btn" />
 
             <TextView
-                android:text="0"
-                android:layout_width="35dp"
+                android:text="0 @ $-0.00 = $0.00"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/hd_price_expr"
                 android:textAlignment="center" />
+
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="1"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:id="@+id/candy_layout">
+
+            <Button
+                android:text="+"
+                android:layout_width="49dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:id="@+id/candy_plus_btn" />
+
+            <TextView
+                android:text="Hot Dog"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:id="@+id/candy_text"
+                android:layout_width="100dp" />
+
+            <Button
+                android:text="-"
+                android:layout_width="53dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/candy_minus_btn" />
+
+            <TextView
+                android:text="0 @ $0.00 = $0.00"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/candy_price_expr"
+                android:textAlignment="center" />
+
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="1"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:id="@+id/soda_layout">
+
+            <Button
+                android:text="+"
+                android:layout_width="49dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:id="@+id/soda_plus_btn" />
+
+            <TextView
+                android:text="Soda"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:id="@+id/soda_text"
+                android:layout_width="100dp" />
+
+            <Button
+                android:text="-"
+                android:layout_width="53dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/soda_minus_btn" />
+
+            <TextView
+                android:text="0 @ $0.00 = $0.00"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:id="@+id/soda_price_expr" />
+                android:id="@+id/soda_price_expr"
 
         </LinearLayout>
     </LinearLayout>
