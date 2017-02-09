@@ -17,13 +17,21 @@
         android:layout_height="match_parent"
         android:id="@+id/main_layout">
 
+        <android.support.v7.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?attr/colorPrimary"
+            android:theme="?attr/actionBarTheme"
+            android:minHeight="?attr/actionBarSize"
+            android:id="@+id/toolbar" />
+
         <LinearLayout
             android:orientation="horizontal"
             android:layout_width="match_parent"
-            android:layout_height="20dp"
             android:background="@android:drawable/title_bar"
             android:backgroundTint="@color/colorPrimaryDark"
-            android:id="@+id/top_border_layout"></LinearLayout>
+            android:id="@+id/top_border_layout"
+            android:layout_height="10dp"></LinearLayout>
 
         <LinearLayout
             android:orientation="horizontal"
@@ -158,15 +166,15 @@
             <LinearLayout
                 android:orientation="horizontal"
                 android:layout_width="match_parent"
-                android:layout_height="20dp"
                 android:background="@android:drawable/title_bar"
                 android:backgroundTint="@color/colorPrimaryDark"
-                android:id="@+id/top_div_layout"></LinearLayout>
+                android:id="@+id/top_div_layout"
+                android:layout_height="10dp"></LinearLayout>
 
             <LinearLayout
                 android:orientation="horizontal"
                 android:layout_width="match_parent"
-                android:layout_height="50dp"
+                android:layout_height="wrap_content"
                 android:id="@+id/total_expr_layout"
                 android:gravity="right|center_vertical">
 
@@ -177,16 +185,18 @@
                     android:layout_weight="1"
                     android:textAlignment="textEnd"
                     android:layout_width="200dp"
-                    android:gravity="center_vertical" />
+                    android:gravity="center_vertical"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginTop="10dp" />
             </LinearLayout>
 
             <LinearLayout
                 android:orientation="horizontal"
                 android:layout_width="match_parent"
-                android:layout_height="20dp"
                 android:backgroundTint="@color/colorPrimaryDark"
                 android:id="@+id/bottom_div_layout"
-                android:background="@android:drawable/title_bar"></LinearLayout>
+                android:background="@android:drawable/title_bar"
+                android:layout_height="10dp"></LinearLayout>
 
             <LinearLayout
                 android:orientation="horizontal"
@@ -202,8 +212,8 @@
                     android:id="@+id/status_message_text"
                     android:layout_weight="1"
                     android:gravity="center_horizontal"
-                    android:layout_marginTop="20dp"
-                    android:layout_marginBottom="20dp" />
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp" />
             </LinearLayout>
 
             <LinearLayout
