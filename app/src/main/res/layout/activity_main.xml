@@ -8,12 +8,22 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.example.marc.concessionstand.MainActivity">
+    tools:context="com.example.marc.concessionstand.MainActivity"
+    android:background="@color/colorPrimary">
 
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:id="@+id/main_layout">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:background="@android:drawable/title_bar"
+            android:backgroundTint="@color/colorPrimaryDark"
+            android:id="@+id/top_border_layout"></LinearLayout>
 
         <LinearLayout
             android:orientation="horizontal"
@@ -27,12 +37,12 @@
 
             <Button
                 android:text="+"
-                android:layout_width="49dp"
                 android:layout_height="wrap_content"
                 android:layout_alignParentTop="true"
                 android:layout_alignParentLeft="true"
                 android:layout_alignParentStart="true"
-                android:id="@+id/hd_plus_btn" />
+                android:id="@+id/hd_plus_btn"
+                android:layout_width="50dp" />
 
             <TextView
                 android:text="Hot Dog"
@@ -43,9 +53,9 @@
 
             <Button
                 android:text="-"
-                android:layout_width="53dp"
                 android:layout_height="wrap_content"
-                android:id="@+id/hd_minus_btn" />
+                android:id="@+id/hd_minus_btn"
+                android:layout_width="50dp" />
 
             <TextView
                 android:text="0 @ $-0.00 = $0.00"
@@ -75,7 +85,7 @@
                 android:id="@+id/candy_plus_btn" />
 
             <TextView
-                android:text="Hot Dog"
+                android:text="Candy"
                 android:layout_height="wrap_content"
                 android:textAlignment="center"
                 android:id="@+id/candy_text"
@@ -136,6 +146,151 @@
                 android:id="@+id/soda_price_expr"
 
         </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:elevation="1dp"
+            android:layout_weight="1"
+            android:id="@+id/bottom_group_layout">
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:background="@android:drawable/title_bar"
+                android:backgroundTint="@color/colorPrimaryDark"
+                android:id="@+id/top_div_layout"></LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:id="@+id/total_expr_layout"
+                android:gravity="right|center_vertical">
+
+                <TextView
+                    android:text="TOTAL = $0.00"
+                    android:layout_height="match_parent"
+                    android:id="@+id/total_expr"
+                    android:layout_weight="1"
+                    android:textAlignment="textEnd"
+                    android:layout_width="200dp"
+                    android:gravity="center_vertical" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:backgroundTint="@color/colorPrimaryDark"
+                android:id="@+id/bottom_div_layout"
+                android:background="@android:drawable/title_bar"></LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/status_layout"
+                android:layout_gravity="center_vertical">
+
+                <TextView
+                    android:text="Please enter your username and passsword"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/status_message_text"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="20dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/account_layout">
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:id="@+id/login_btns_layout"
+                    android:layout_gravity="center_vertical">
+
+                    <Button
+                        android:text="LOGIN"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/login_btn"
+                        android:layout_weight="1"
+                        android:layout_width="match_parent" />
+
+                    <Button
+                        android:text="LOGOUT"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/logout_btn"
+                        android:layout_weight="1" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/login_text_area_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_gravity="center_vertical">
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="textPersonName"
+                        android:text="Name"
+                        android:ems="10"
+                        android:id="@+id/username_edit_text"
+                        android:layout_margin="10dp"
+                        android:background="@color/colorAccent"
+                        android:textAlignment="textEnd" />
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="textPassword"
+                        android:ems="10"
+                        android:id="@+id/password_edit_text"
+                        android:layout_margin="10dp"
+                        android:background="@color/colorAccent"
+                        android:text="password"
+                        android:textAlignment="textEnd" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="bottom"
+                android:layout_weight="1"
+                android:id="@+id/action_button_layout">
+
+                <Button
+                    android:text="CLEAR ORDER"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/clear_btn"
+                    android:layout_weight="1" />
+
+                <Button
+                    android:text="SUBMIT ORDER"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/submit_btn"
+                    android:layout_weight="1" />
+            </LinearLayout>
+        </LinearLayout>
+
     </LinearLayout>
 
 </RelativeLayout>
