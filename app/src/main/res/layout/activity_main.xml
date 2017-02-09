@@ -23,7 +23,7 @@
             android:background="?attr/colorPrimary"
             android:theme="?attr/actionBarTheme"
             android:minHeight="?attr/actionBarSize"
-            android:id="@+id/toolbar" />
+            android:id="@+id/app_bar_main" />
 
         <LinearLayout
             android:orientation="horizontal"

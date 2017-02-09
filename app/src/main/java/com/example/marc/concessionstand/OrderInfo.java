@@ -1,12 +1,20 @@
-import java.math.BigDecimal;
-
+package com.example.marc.concessionstand;
 /**
  * Created by Marc on 2/9/2017.
  */
 
+import java.math.BigDecimal;
+import java.util.ArrayList;
+import java.util.HashMap;
+
+
 public class OrderInfo {
 
+    protected HashMap<String , ArrayList<Order>> current_orders = new HashMap<String , ArrayList<Order>>();
+
     protected class Order {
+
+        protected HashMap<String , ItemOrder> order_map = new HashMap<String , ItemOrder>();
 
         public class ItemOrder {
 

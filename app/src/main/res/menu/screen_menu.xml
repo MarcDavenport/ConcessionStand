@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/order_screen_menu_item"
+        android:title="Order Screen" />
+    <item android:id="@+id/confirm_screen_menu_item"
+        android:title="Confirm Order" />
+    <item android:id="@+id/inventory_screen_menu_item"
+        android:title="Inventory screen" />
+</menu>
