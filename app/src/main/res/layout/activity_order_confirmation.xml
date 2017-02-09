@@ -18,28 +18,109 @@
         <LinearLayout
             android:orientation="horizontal"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="wrap_content">
 
             <TextView
                 android:text="0"
-                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/hd_quantity"
-                android:layout_weight="1" />
+                android:layout_weight="1"
+                android:layout_width="10dp" />
 
             <TextView
                 android:text="Hot Dog"
-                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/hd_name"
+                android:layout_weight="1"
+                android:layout_width="50dp" />
+
+            <TextView
+                android:text="@ $2.00 = "
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/hd_price"
                 android:layout_weight="1" />
 
             <TextView
                 android:text="$0.00"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/textView3"
+                android:id="@+id/hd_total_price"
                 android:layout_weight="1" />
         </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:text="0"
+                android:layout_height="wrap_content"
+                android:id="@+id/candy_quantity"
+                android:layout_weight="1"
+                android:layout_width="10dp" />
+
+            <TextView
+                android:text="Candy"
+                android:layout_height="wrap_content"
+                android:id="@+id/candy_name"
+                android:layout_weight="1"
+                android:layout_width="50dp" />
+
+            <TextView
+                android:text="@ $1.25 = "
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/candy_price"
+                android:layout_weight="1" />
+
+            <TextView
+                android:text="$0.00"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/candy_total_price"
+                android:layout_weight="1" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:text="0"
+                android:layout_height="wrap_content"
+                android:id="@+id/soda_quantity"
+                android:layout_weight="1"
+                android:layout_width="10dp" />
+
+            <TextView
+                android:text="Soda"
+                android:layout_height="wrap_content"
+                android:id="@+id/soda_name"
+                android:layout_weight="1"
+                android:layout_width="50dp" />
+
+            <TextView
+                android:text="@ $0.50 = "
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/soda_price"
+                android:layout_weight="1" />
+
+            <TextView
+                android:text="$0.00"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/soda_total_price"
+                android:layout_weight="1" />
+        </LinearLayout>
+
+
+
+
+
     </LinearLayout>
 </RelativeLayout>
