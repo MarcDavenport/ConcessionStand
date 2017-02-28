@@ -182,7 +182,7 @@ public class MySQLDatabase {
             return;
         }
 
-        String sql2 = "INSERT INTO Inventory VALUES(NULL , '" + entry.item_name + "' , '" + entry.item_price.toString() + "' , " +
+        String sql2 = "INSERT INTO Inventory VALUES(NULL , '" + entry.item_name + "' , " + entry.item_price.toString() + " , " +
                         Integer.toString(entry.item_quantity) + " , " + (entry.item_for_sale?"1":"0") + ";";
         if (1 != stmt2.executeUpdate(sql2)) {
             throw new Exception("Failed to insert entry into Inventory table!" + entry.toString());
