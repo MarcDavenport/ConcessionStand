@@ -1,6 +1,8 @@
 package com.example.marc.concessionstand;
 
 import java.math.BigDecimal;
+import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -8,15 +10,23 @@ import java.util.List;
  */
 
 public class Inventory {
-    public class InventoryEntry {
-        protected String item_name;
-        protected BigDecimal item_price;
-        protected int item_quantity;
-        protected boolean item_for_sale;
+
+    protected ArrayList<InventoryEntry> inventory = null;
+
+    public Inventory() {}
+
+    public void GetInventoryFromDatabase() throws Exception {
+        try {
+            MySQLDatabase db = new MySQLDatabase();
+            inventory = db.GetInventoryFromDatabase();
+        }
+        catch (Exception e) {
+            throw new Exception(e);
+        }
     }
 
-    List<InventoryEntry> inventory;
-
-
+    public ArrayList<InventoryEntry> GetInventoryEntries() {
+        return inventory;
+    }
 
 }

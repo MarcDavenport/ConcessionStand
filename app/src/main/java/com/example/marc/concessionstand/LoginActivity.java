@@ -20,9 +20,13 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
-        Intent i = getIntent();
-        next_screen = i.getStringExtra("NextScreen");
-        System.out.println("Next activity will be " + next_screen);
+        EditText email_edit_text = (EditText)findViewById(R.id.email_edit_text);
+        EditText user_edit_text = (EditText)findViewById(R.id.username_edit_text);
+        EditText pw_edit_text = (EditText)findViewById(R.id.password_edit_text);
+
+        email_edit_text.setText("Email");
+        user_edit_text.setText("Name");
+        pw_edit_text.setText("Password");
 
         Button login_button = (Button)findViewById(R.id.login_btn);
         login_button.setOnClickListener(this);
@@ -33,9 +37,9 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         if (v.getId() == R.id.login_btn) {
             boolean valid_login = false;
 
+            EditText email_edit_text = (EditText)findViewById(R.id.email_edit_text);
             EditText user_edit_text = (EditText)findViewById(R.id.username_edit_text);
             EditText pw_edit_text = (EditText)findViewById(R.id.password_edit_text);
-            EditText email_edit_text = (EditText)findViewById(R.id.email_edit_text);
 
             String email = email_edit_text.getText().toString();
             String user = user_edit_text.getText().toString();
@@ -54,8 +58,14 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
             }
 
             if (valid_login) {
+
+                email_edit_text.setText("Email");
+                user_edit_text.setText("Name");
+                pw_edit_text.setText("Password");
+
                 String activity = "com.example.marc.concessionstand.WorkerMenu";
                 Intent i = new Intent(activity);
+                i.putExtra("Name" , user);
                 startActivity(i);
             }
             else {

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/inventory_entry_layout"
+    android:layout_marginBottom="2dp"
+    android:layout_marginTop="2dp">
+
+    <TextView
+        android:text="Id"
+        android:layout_height="wrap_content"
+        android:id="@+id/inventory_item_id"
+        android:layout_width="30dp"
+        android:textAlignment="viewEnd"
+        android:layout_gravity="center_vertical" />
+
+    <TextView
+        android:text="Item Name"
+        android:layout_height="wrap_content"
+        android:id="@+id/inventory_item_name"
+        android:textAlignment="viewEnd"
+        android:layout_gravity="center_vertical"
+        android:layout_width="125dp" />
+
+    <EditText
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
+        android:ems="10"
+        android:id="@+id/inventory_item_price_edit_text"
+        android:text="0.00"
+        android:layout_width="70dp"
+        android:textAlignment="viewEnd" />
+
+    <TextView
+        android:text="Stock"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/inventory_item_quantity"
+        android:textAlignment="viewEnd"
+        android:layout_gravity="center_vertical" />
+
+    <CheckBox
+        android:layout_height="wrap_content"
+        android:id="@+id/inventory_for_sale_checkbox"
+        android:layout_gravity="right|center_vertical"
+        android:textSize="0sp"
+        android:gravity="right|center_vertical|center_horizontal"
+        android:layout_width="100dp" />
+
+</LinearLayout>

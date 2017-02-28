@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_inventory_edit_screen"
     android:layout_width="match_parent"
@@ -8,6 +9,129 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.example.marc.concessionstand.InventoryEditScreen">
+    tools:context="com.example.marc.concessionstand.InventoryEditScreen"
+    android:orientation="vertical"
+    android:background="@color/colorPrimary">
 
-</RelativeLayout>
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.v7.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimaryDark"
+            android:theme="?attr/actionBarTheme"
+            android:minHeight="?attr/actionBarSize"
+            android:id="@+id/inventory_edit_toolbar"
+            app:title="Warehouse Inventory"
+            app:titleTextColor="@color/colorAccent" />
+
+        <LinearLayout
+            android:orientation="horizontal" android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/inventory_entry_layout"
+            android:background="@color/colorPrimaryDark"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="5dp"
+            android:weightSum="1">
+
+            <TextView
+                android:text="Id"
+                android:layout_height="wrap_content"
+                android:id="@+id/inventory_item_id_label"
+                android:textColor="@color/colorAccent"
+                android:layout_width="30dp"
+                android:textAlignment="viewEnd" />
+
+            <TextView
+                android:text="Item"
+                android:layout_height="wrap_content"
+                android:id="@+id/inventory_item_name_label"
+                android:textColor="@color/colorAccent"
+                android:textAlignment="viewEnd"
+                android:layout_width="125dp" />
+
+            <TextView
+                android:text="Price"
+                android:layout_height="wrap_content"
+                android:id="@+id/inventory_item_price_label"
+                android:textColor="@color/colorAccent"
+                android:textAlignment="viewEnd"
+                android:layout_width="70dp" />
+
+            <TextView
+                android:text="Stock"
+                android:layout_height="wrap_content"
+                android:id="@+id/inventory_item_quantity_label"
+                android:textColor="@color/colorAccent"
+                android:textAlignment="viewEnd"
+                android:layout_width="50dp" />
+
+            <TextView
+                android:text="For Sale"
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/inventory_item_for_sale_label"
+                android:textColor="@color/colorAccent"
+                android:textAlignment="viewEnd" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:background="@color/colorAccent"
+            android:layout_height="200dp">
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:id="@+id/inventory_scroll_layout" />
+            </ScrollView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                android:text="Remove Item"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/inventory_remove_item_btn"
+                android:layout_weight="1"
+                android:textColor="@color/colorAccent"
+                android:backgroundTint="@color/colorPrimaryDark" />
+
+            <Button
+                android:text="Add Item"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/inventory_add_item_btn"
+                android:layout_weight="1"
+                android:textColor="@color/colorAccent"
+                android:backgroundTint="@color/colorPrimaryDark" />
+
+            <Button
+                android:text="Exit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/inventory_exit_btn"
+                android:layout_weight="1"
+                android:textColor="@color/colorAccent"
+                android:backgroundTint="@color/colorPrimaryDark" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

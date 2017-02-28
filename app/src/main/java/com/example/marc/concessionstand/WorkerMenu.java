@@ -15,8 +15,11 @@ public class WorkerMenu extends AppCompatActivity implements View.OnClickListene
 
         Button b1 = (Button)findViewById(R.id.main_edit_inventory_btn);
         Button b2 = (Button)findViewById(R.id.main_view_sales_btn);
+        Button b3 = (Button)findViewById(R.id.main_view_logout_btn);
+
         b1.setOnClickListener(this);
         b2.setOnClickListener(this);
+        b3.setOnClickListener(this);
     }
 
 
@@ -29,6 +32,9 @@ public class WorkerMenu extends AppCompatActivity implements View.OnClickListene
         if (v.getId() == R.id.main_view_sales_btn) {
             Intent i = new Intent("com.example.marc.concessionstand.ViewSalesScreen");
             startActivity(i);
+        }
+        if (v.getId() == R.id.main_view_logout_btn) {
+            finish();
         }
     }
 }

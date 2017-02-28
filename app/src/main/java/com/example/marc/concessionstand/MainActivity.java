@@ -21,11 +21,35 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         b1.setOnClickListener(this);
         Button b2 = (Button)findViewById(R.id.main_worker_login_btn);
         b2.setOnClickListener(this);
+
+        try {
+            MySQLDatabase db = new MySQLDatabase();
+
+            if (db.HasUser("mdavenport@coe.edu")) {
+                db.RemoveUser("mdavenport@coe.edu");
+            }
+            if (db.HasUser("shughes@coe.edu")) {
+                db.RemoveUser("shughes@coe.edu");
+            }
+            if (db.HasUser("abc")) {
+                db.RemoveUser("abc");
+            }
+            db.AddUser("mdavenport@coe.edu" , "Marc" , "password");
+            db.AddUser("shughes@coe.edu" , "Stephen" , "Hughes");
+            db.AddUser("abc" , "A-Z" , "123");
+
+        }
+        catch (Exception e) {
+            e.printStackTrace();
+            System.out.println(e.getMessage());
+        }
+
+
     }
 
     @Override
     public void onClick(View v) {
-        if (v.getId() == R.id.main_place_order_btn || v.getId() == R.id.confirm_screen_menu_item) {
+        if (v.getId() == R.id.main_place_order_btn) {
             Intent i = new Intent("com.example.marc.concessionstand.OrderScreen");
             startActivity(i);
         }
@@ -37,6 +61,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.screen_menu, menu);
+//        getMenuInflater().inflate(R.menu.screen_menu, menu);
         return true;
     }}

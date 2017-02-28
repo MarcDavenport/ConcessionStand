@@ -17,10 +17,7 @@ public class OrderConfirmation extends AppCompatActivity implements View.OnClick
     }
 
     public void onClick(View v) {
-        if (v.getId() == R.id.order_screen_menu_item) {
-            Intent i = new Intent("com.example.marc.concessionstand.MainActivity");
-            startActivity(i);
-        }
+
     }
 
 }
