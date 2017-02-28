@@ -14,6 +14,7 @@ public class OrderInfo {
 
     protected class Order {
 
+        /// Customer name and associated item order
         protected HashMap<String , ItemOrder> order_map = new HashMap<String , ItemOrder>();
 
         public class ItemOrder {

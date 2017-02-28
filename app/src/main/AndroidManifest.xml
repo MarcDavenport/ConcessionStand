@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.marc.concessionstand">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -11,15 +13,51 @@
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
 
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".OrderScreen">
+            <intent-filter>
+                <action android:name="com.example.marc.concessionstand.OrderScreen" />
+
+                <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
         <activity android:name=".OrderConfirmation">
-            <intent_filter>
+            <intent-filter>
                 <action android:name="com.example.marc.concessionstand.OrderConfirmation" />
+
                 <category android:name="android.intent.category.DEFAULT" />
-            </intent_filter>
+            </intent-filter>
+        </activity>
+        <activity android:name=".LoginActivity">
+            <intent-filter>
+                <action android:name="com.example.marc.concessionstand.LoginActivity" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".WorkerMenu">
+            <intent-filter>
+                <action android:name="com.example.marc.concessionstand.WorkerMenu" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".InventoryEditScreen">
+            <intent-filter>
+                <action android:name="com.example.marc.concessionstand.InventoryEditScreen" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".ViewSalesScreen">
+            <intent-filter>
+                <action android:name="com.example.marc.concessionstand.ViewSalesScreen" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
         </activity>
     </application>
 

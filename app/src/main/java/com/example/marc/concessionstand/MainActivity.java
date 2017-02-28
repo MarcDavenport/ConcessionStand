@@ -16,17 +16,21 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         setContentView(R.layout.activity_main);
         Toolbar myToolbar = (Toolbar) findViewById(R.id.app_bar_main);
         setSupportActionBar(myToolbar);
-        Button b = (Button)findViewById(R.id.submit_btn);
-        b.setOnClickListener(this);
-    }
 
-    OrderInfo current_order = new OrderInfo();
+        Button b1 = (Button)findViewById(R.id.main_place_order_btn);
+        b1.setOnClickListener(this);
+        Button b2 = (Button)findViewById(R.id.main_worker_login_btn);
+        b2.setOnClickListener(this);
+    }
 
     @Override
     public void onClick(View v) {
-        if (v.getId() == R.id.submit_btn || v.getId() == R.id.confirm_screen_menu_item) {
-
-            Intent i = new Intent("com.example.marc.concessionstand.OrderConfirmation");
+        if (v.getId() == R.id.main_place_order_btn || v.getId() == R.id.confirm_screen_menu_item) {
+            Intent i = new Intent("com.example.marc.concessionstand.OrderScreen");
+            startActivity(i);
+        }
+        if (v.getId() == R.id.main_worker_login_btn) {
+            Intent i = new Intent("com.example.marc.concessionstand.LoginActivity");
             startActivity(i);
         }
     }
